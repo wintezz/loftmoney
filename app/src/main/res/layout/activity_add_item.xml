@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItemActivity">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="113dp"
+        android:layout_marginBottom="465dp"
+        android:text="@string/Название"
+        android:textSize="50dp"/>
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="183dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="395dp"
+        android:text="@string/Цена"
+        android:textSize="50dp" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            android:layout_marginEnd="112dp"
+            android:layout_marginTop="302dp"
+            android:layout_marginBottom="302dp"
+            android:text="@string/Добавить"
+            android:textSize="15dp"
+            android:background="@android:color/white" />
+
+
+
+</FrameLayout>
