@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_add_item.xml" value="0.24972455897859022" />
+        <entry key="app/src/main/res/layout/activity_add_item.xml" value="0.24145076624088763" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24348177920627728" />
+        <entry key="app/src/main/res/layout/expenses.xml" value="0.42083149522804486" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.2985987499812949" />
       </map>
     </option>
   </component>
