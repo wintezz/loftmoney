@@ -2,5 +2,10 @@
     <string name="Цена">Цена</string>
     <string name="Название">Название</string>
     <string name="Добавить">Добавить</string>
+    <string name="Доходы">Доходы</string>
+    <string name="Расходы">Расходы</string>
+    <string name="Баланс">Баланс</string>
+    <string name="title_fragment_b">Fragment B</string>
+    <string name="fragment_a">Fragment A</string>
 
 </resources>

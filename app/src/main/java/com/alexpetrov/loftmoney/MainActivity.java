@@ -13,10 +13,9 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private ItemsAdapter itemsAdapter = new ItemsAdapter();
-
     private ItemsAdapter adapter;
-
     private List<Item> items;
+
 
     @SuppressLint("ResourceType")
     @Override
@@ -32,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
         dividerItemDecoration.setDrawable(getResources().getDrawable(R.layout.marcup));
         recyclerView.addItemDecoration(dividerItemDecoration);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.containerView, new FragmentA())
+                .commit();
 
 
     }
