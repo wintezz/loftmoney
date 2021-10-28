@@ -1,43 +1,63 @@
 package com.alexpetrov.loftmoney;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
-import java.util.List;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ItemsAdapter itemsAdapter = new ItemsAdapter();
-    private ItemsAdapter adapter;
-    private List<Item> items;
+    TabLayout tabs;
+    ViewPager2 pages;
 
-
-    @SuppressLint("ResourceType")
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RecyclerView recyclerView = findViewById(R.id.recycler);
-        recyclerView.setAdapter(itemsAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter.setItems(items);
+        tabs = findViewById(R.id.tabs);
+        pages = findViewById(R.id.pages);
 
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
-        dividerItemDecoration.setDrawable(getResources().getDrawable(R.layout.marcup));
-        recyclerView.addItemDecoration(dividerItemDecoration);
+        //        connect pages and fragments
+        pages.setAdapter(new MainPagerAdapter(this));
+  //      pages.setOffscreenPageLimit(3);
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.containerView, new FragmentA())
-                .commit();
+//        connect tabs and pages
+        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabs, pages, new TabLayoutMediator.TabConfigurationStrategy() {
+            @Override
+            public void onConfigureTab(TabLayout.Tab tab, int position) {
+                tab.setText(getResources().getStringArray(R.array.main_pager_titles)[position]);
+            }
+        });
+        tabLayoutMediator.attach();
+    }
 
+    private class MainPagerAdapter extends FragmentStateAdapter {
 
+        public MainPagerAdapter(FragmentActivity fragmentActivity) {
+            super(fragmentActivity);
+        }
+
+        @Override
+        public Fragment createFragment(int position) {
+            if (position == 2){
+       //         return new BalanceFragment();
+                return BudgetFragment.newInstance(position);
+            }
+            else {
+                return BudgetFragment.newInstance(position);
+            }
+        }
+
+        @Override
+        public int getItemCount() {
+            return 3;
+        }
     }
 
 

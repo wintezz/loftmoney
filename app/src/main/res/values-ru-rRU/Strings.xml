@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Учет бюджета</string>
     <string name="Название">Название</string>
     <string name="Цена">Цена</string>
     <string name="Добавить">Добавить</string>
     <string name="Доходы">Доходы</string>
     <string name="Расходы">Расходы</string>
     <string name="Баланс">Баланс</string>
+
+    <array name="main_pager_titles">
+        <item>expenses</item>
+        <item>incomes</item>
+        <item>balance</item>
+    </array>
 
 </resources>
