@@ -1,6 +1,16 @@
 <resources>
-    <string name="Цена">Цена</string>
-    <string name="Название">Название</string>
-    <string name="Добавить">Добавить</string>
+    <string name="app_name">LoftMoney</string>
+    <string name="Цена">Price</string>
+    <string name="Название">Name</string>
+    <string name="Добавить">Add</string>
+    <string name="Доходы">Incomes</string>
+    <string name="Расходы">Expenses</string>
+    <string name="Баланс">Balance</string>
+
+    <array name="main_pager_titles">
+        <item>expenses</item>
+        <item>incomes</item>
+        <item>balance</item>
+    </array>
 
 </resources>

@@ -15,9 +15,11 @@ import java.util.List;
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHolder> {
 
     private List<Item> items = Collections.emptyList();
+    private int positionTabs;
 
-    public void setItems(List<Item> items) {
+    public void setItems(List<Item> items, int currentPosition) {
         this.items = items;
+        positionTabs = currentPosition;
         notifyDataSetChanged();
     }
 
@@ -38,7 +40,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder itemViewHolder, int position) {
         Item item = items.get(position);
-        itemViewHolder.bind(item);
+        itemViewHolder.bind(item, positionTabs);
     }
 
     static class ItemViewHolder extends RecyclerView.ViewHolder {
@@ -53,7 +55,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
             price = itemView.findViewById(R.id.price);
         }
 
-        public void bind(Item item) {
+        public void bind(Item item, int currentPosition) {
             name.setText(item.getName());
             price.setText(item.getPrice());
 

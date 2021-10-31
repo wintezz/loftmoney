@@ -3,20 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1925925925925926" />
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1925925925925926" />
-        <entry key="app/src/main/res/drawable/on_activity_result.xml" value="0.1925925925925926" />
-        <entry key="app/src/main/res/drawable/set_result.xml" value="0.1925925925925926" />
-        <entry key="app/src/main/res/layout/activity_add_item.xml" value="0.16095664465380738" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.222586444591338" />
-        <entry key="app/src/main/res/layout/item.xml" value="0.19384057971014493" />
-        <entry key="app/src/main/res/layout/list_item.xml" value="0.11413043478260869" />
-        <entry key="app/src/main/res/layout/marcup.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_add_item.xml" value="0.24972455897859022" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17474547063425" />
+        <entry key="app/src/main/res/layout/budget_fragment.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_a.xml" value="0.18206521739130435" />
+        <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.20104166666666667" />
+        <entry key="app/src/main/res/layout/marcup.xml" value="0.21510416666666668" />
       </map>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/item.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
