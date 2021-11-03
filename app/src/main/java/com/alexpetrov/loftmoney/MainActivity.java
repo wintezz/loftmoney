@@ -1,5 +1,6 @@
 package com.alexpetrov.loftmoney;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabs;
     ViewPager2 pages;
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -23,11 +26,14 @@ public class MainActivity extends AppCompatActivity {
         tabs = findViewById(R.id.tabs);
         pages = findViewById(R.id.pages);
 
-        //        connect pages and fragments
-        pages.setAdapter(new MainPagerAdapter(this));
-  //      pages.setOffscreenPageLimit(3);
+        FloatingActionButton floatingActionButton = findViewById(R.id.fab);
+        floatingActionButton.setOnClickListener(v -> {
+            final int activeFragmentIndex = pages.getCurrentItem();
+            Fragment activeFragment = getSupportFragmentManager().getFragments().get(activeFragmentIndex);
+            activeFragment.startActivity(new Intent(MainActivity.this, AddItemActivity.class));
+        });
 
-//        connect tabs and pages
+        pages.setAdapter(new MainPagerAdapter(this));
         TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabs, pages, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(TabLayout.Tab tab, int position) {
@@ -45,11 +51,10 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment createFragment(int position) {
-            if (position == 2){
-       //         return new BalanceFragment();
+            if (position == 2) {
+                //         return new BalanceFragment();
                 return BudgetFragment.newInstance(position);
-            }
-            else {
+            } else {
                 return BudgetFragment.newInstance(position);
             }
         }
@@ -59,16 +64,6 @@ public class MainActivity extends AppCompatActivity {
             return 3;
         }
     }
-
-
-
-
-
-
-
-
-
-
 
 
 

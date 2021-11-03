@@ -6,6 +6,10 @@
     <string name="Доходы">Incomes</string>
     <string name="Расходы">Expenses</string>
     <string name="Баланс">Balance</string>
+    <string name="connection_lost">Sorry, we can\'t load money list</string>
+    <string name="fill_fields">Please fill all fields</string>
+    <string name="succes_added">income war succesfully added</string>
+    <string name="activity_main_title">Учёт бюджета</string>
 
     <array name="main_pager_titles">
         <item>expenses</item>

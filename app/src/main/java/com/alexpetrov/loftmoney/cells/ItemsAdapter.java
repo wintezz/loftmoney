@@ -1,4 +1,4 @@
-package com.alexpetrov.loftmoney;
+package com.alexpetrov.loftmoney.cells;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.alexpetrov.loftmoney.R;
 
 import java.util.Collections;
 import java.util.List;
@@ -33,7 +35,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int position) {
         Context context = viewGroup.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.marcup, viewGroup, false);
+        View view = inflater.inflate(R.layout.item_view, viewGroup, false);
         return new ItemViewHolder(view);
     }
 
