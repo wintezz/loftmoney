@@ -1,6 +1,7 @@
 package com.alexpetrov.loftmoney;
 
 import android.os.Bundle;
+import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.alexpetrov.loftmoney.screens.dashboard.DashBoardFragment;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     TabLayout tabs;
     ViewPager2 pages;
+    FrameLayout containerView;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
         tabs = findViewById(R.id.tabs);
         pages = findViewById(R.id.pages);
+        containerView = findViewById(R.id.containerView);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(containerView, new DashBoardFragment())
+                .commitNow();
 
         //        connect pages and fragments
         pages.setAdapter(new MainPagerAdapter(this));

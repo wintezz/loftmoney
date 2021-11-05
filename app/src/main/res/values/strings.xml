@@ -6,6 +6,9 @@
     <string name="Доходы">Incomes</string>
     <string name="Расходы">Expenses</string>
     <string name="Баланс">Balance</string>
+    <string name="title_expence">Расходы</string>
+    <string name="title_incomes">Доходы</string>
+    <string name="title_balance" translatable="false">Баланс</string>
 
     <array name="main_pager_titles">
         <item>expenses</item>

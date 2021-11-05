@@ -52,9 +52,6 @@ public class BudgetFragment extends Fragment {
     }
 
     private void generateData() {
-        items.add(new Item("Car", "5000"));
-        items.add(new Item("Plane", "50000000"));
-        itemsAdapter.setItems(items, currentPosition);
     }
 
     public static BudgetFragment newInstance(int position) {
