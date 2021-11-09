@@ -3,16 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.21666666666666667" />
+        <entry key="app/src/main/res/drawable/add_icon.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/button_auth_background.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/check_icon.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_google.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_trash.xml" value="0.2111111111111111" />
         <entry key="app/src/main/res/layout/activity_add_item.xml" value="0.1493139628732849" />
+        <entry key="app/src/main/res/layout/activity_balance.xml" value="0.2296875" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.2296875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18463073852295409" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2296875" />
         <entry key="app/src/main/res/layout/budget_fragment.xml" value="0.10204462902830631" />
+        <entry key="app/src/main/res/layout/cell_money.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/fragment_a.xml" value="0.18206521739130435" />
+        <entry key="app/src/main/res/layout/fragment_balance.xml" value="0.17037037037037037" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.20104166666666667" />
         <entry key="app/src/main/res/layout/fragment_budget.xml" value="0.2296875" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.18518518518518517" />
         <entry key="app/src/main/res/layout/fragment_money.xml" value="0.2296875" />
         <entry key="app/src/main/res/layout/item_view.xml" value="0.2296875" />
         <entry key="app/src/main/res/layout/marcup.xml" value="0.21510416666666668" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21203703703703702" />
       </map>
     </option>
   </component>
