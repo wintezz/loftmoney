@@ -35,7 +35,7 @@ android {
             buildConfigField("String", "URL", "\"https://loftschool.com/android-api/basic/v1/\"");
 
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rugles.pro'
         }
     }
     compileOptions {
