@@ -2,7 +2,8 @@ package com.alexpetrov.loftmoney;
 
 import android.app.Application;
 
-import com.alexpetrov.loftmoney.remote.MoneyApi;
+import com.alexpetrov.loftmoney.remote.AuthAPI;
+import com.alexpetrov.loftmoney.remote.ItemsAPI;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -10,19 +11,19 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-
 public class LoftApp extends Application {
 
-    public MoneyApi moneyApi;
+    public ItemsAPI itemsAPI;
+    public AuthAPI authAPI;
+    public static String AUTH_KEY = "authKey";
 
     @Override
     public void onCreate() {
         super.onCreate();
-
         configureRetrofit();
     }
 
-    public void configureRetrofit() {
+    private void configureRetrofit() {
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
@@ -30,16 +31,15 @@ public class LoftApp extends Application {
                 .addInterceptor(httpLoggingInterceptor)
                 .build();
 
-
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://verdant-violet.glitch.me/")
+//              .baseUrl("https://verdant-violet.glitch.me/")
+                .baseUrl("https://loftschool.com/android-api/basic/v1/")
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
 
-        moneyApi = retrofit.create(MoneyApi.class);
-
-
+        itemsAPI = retrofit.create(ItemsAPI.class);
+        authAPI = retrofit.create(AuthAPI.class);
     }
 }
