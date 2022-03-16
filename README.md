@@ -1,3 +1,0 @@
-# loftschool
-# loftmoney
-# loftmoney
